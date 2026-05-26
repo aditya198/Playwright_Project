@@ -1,0 +1,7 @@
+Exception in PromiseRejectCallback:
+C:\Playwright_POM_Final_Project\Pages\AdminLogin.ts:35
+  }
+  ^
+
+RangeError: Maximum call stack size exceeded
+
