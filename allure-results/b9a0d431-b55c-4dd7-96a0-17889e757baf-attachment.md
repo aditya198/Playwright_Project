@@ -1,0 +1,1317 @@
+# Instructions
+
+- Following Playwright test failed.
+- Explain why, be concise, respect Playwright best practices.
+- Provide a snippet of code with the fix, if possible.
+
+# Test info
+
+- Name: AddMultipleExc.spec.ts >> Multiple Data Using Excel File >> Add Employee using Excel pk
+- Location: Tests\AddMultipleExc.spec.ts:30:13
+
+# Error details
+
+```
+Test timeout of 30000ms exceeded.
+```
+
+```
+Error: locator.waitFor: Test timeout of 30000ms exceeded.
+Call log:
+  - waiting for locator('input#firstName') to be visible
+    - waiting for" http://orangehrm.qedgetech.com/symfony/web/index.php/pim/viewPimModule" navigation to finish...
+    - navigated to "http://orangehrm.qedgetech.com/symfony/web/index.php/pim/viewEmployeeList"
+
+```
+
+```
+Error: locator.click: Test timeout of 30000ms exceeded.
+Call log:
+  - waiting for getByRole('button', { name: 'Add' })
+    - waiting for" http://orangehrm.qedgetech.com/symfony/web/index.php/pim/viewPimModule" navigation to finish...
+    - navigated to "http://orangehrm.qedgetech.com/symfony/web/index.php/pim/viewEmployeeList"
+    - locator resolved to <input class="" id="btnAdd" value="Add" type="button" name="btnAdd"/>
+  - attempting click action
+    - waiting for element to be visible, enabled and stable
+
+```
+
+# Page snapshot
+
+```yaml
+- generic [active] [ref=e1]:
+  - generic [ref=e2]:
+    - generic [ref=e3]:
+      - link "OrangeHRM" [ref=e4] [cursor=pointer]:
+        - /url: http://www.orangehrm.com/
+        - img "OrangeHRM" [ref=e5]
+      - link "Welcome Suresh" [ref=e6] [cursor=pointer]:
+        - /url: "#"
+      - link [ref=e9] [cursor=pointer]:
+        - /url: /symfony/web/index.php/help/help?label=pim_viewEmployeeList
+      - button "Marketplace" [ref=e12]
+      - generic:
+        - generic:
+          - generic "1"
+    - list [ref=e14]:
+      - listitem [ref=e15]:
+        - link "Admin" [ref=e16] [cursor=pointer]:
+          - /url: /symfony/web/index.php/admin/viewAdminModule
+          - generic [ref=e17]: Admin
+        - list [ref=e18]:
+          - listitem [ref=e19]:
+            - link "User Management" [ref=e20] [cursor=pointer]:
+              - /url: "#"
+            - list [ref=e21]:
+              - listitem [ref=e22]:
+                - link "Users" [ref=e23] [cursor=pointer]:
+                  - /url: /symfony/web/index.php/admin/viewSystemUsers
+          - listitem [ref=e24]:
+            - link "Job" [ref=e25] [cursor=pointer]:
+              - /url: "#"
+            - list [ref=e26]:
+              - listitem [ref=e27]:
+                - link "Job Titles" [ref=e28] [cursor=pointer]:
+                  - /url: /symfony/web/index.php/admin/viewJobTitleList
+              - listitem [ref=e29]:
+                - link "Pay Grades" [ref=e30] [cursor=pointer]:
+                  - /url: /symfony/web/index.php/admin/viewPayGrades
+              - listitem [ref=e31]:
+                - link "Employment Status" [ref=e32] [cursor=pointer]:
+                  - /url: /symfony/web/index.php/admin/employmentStatus
+              - listitem [ref=e33]:
+                - link "Job Categories" [ref=e34] [cursor=pointer]:
+                  - /url: /symfony/web/index.php/admin/jobCategory
+              - listitem [ref=e35]:
+                - link "Work Shifts" [ref=e36] [cursor=pointer]:
+                  - /url: /symfony/web/index.php/admin/workShift
+          - listitem [ref=e37]:
+            - link "Organization" [ref=e38] [cursor=pointer]:
+              - /url: "#"
+            - list [ref=e39]:
+              - listitem [ref=e40]:
+                - link "General Information" [ref=e41] [cursor=pointer]:
+                  - /url: /symfony/web/index.php/admin/viewOrganizationGeneralInformation
+              - listitem [ref=e42]:
+                - link "Locations" [ref=e43] [cursor=pointer]:
+                  - /url: /symfony/web/index.php/admin/viewLocations
+              - listitem [ref=e44]:
+                - link "Structure" [ref=e45] [cursor=pointer]:
+                  - /url: /symfony/web/index.php/admin/viewCompanyStructure
+          - listitem [ref=e46]:
+            - link "Qualifications" [ref=e47] [cursor=pointer]:
+              - /url: "#"
+            - list [ref=e48]:
+              - listitem [ref=e49]:
+                - link "Skills" [ref=e50] [cursor=pointer]:
+                  - /url: /symfony/web/index.php/admin/viewSkills
+              - listitem [ref=e51]:
+                - link "Education" [ref=e52] [cursor=pointer]:
+                  - /url: /symfony/web/index.php/admin/viewEducation
+              - listitem [ref=e53]:
+                - link "Licenses" [ref=e54] [cursor=pointer]:
+                  - /url: /symfony/web/index.php/admin/viewLicenses
+              - listitem [ref=e55]:
+                - link "Languages" [ref=e56] [cursor=pointer]:
+                  - /url: /symfony/web/index.php/admin/viewLanguages
+              - listitem [ref=e57]:
+                - link "Memberships" [ref=e58] [cursor=pointer]:
+                  - /url: /symfony/web/index.php/admin/membership
+          - listitem [ref=e59]:
+            - link "Nationalities" [ref=e60] [cursor=pointer]:
+              - /url: /symfony/web/index.php/admin/nationality
+          - listitem [ref=e61]:
+            - link "Corporate Branding" [ref=e62] [cursor=pointer]:
+              - /url: /symfony/web/index.php/admin/addTheme
+          - listitem [ref=e63]:
+            - link "Configuration" [ref=e64] [cursor=pointer]:
+              - /url: "#"
+            - list [ref=e65]:
+              - listitem [ref=e66]:
+                - link "Email Configuration" [ref=e67] [cursor=pointer]:
+                  - /url: /symfony/web/index.php/admin/listMailConfiguration
+              - listitem [ref=e68]:
+                - link "Email Subscriptions" [ref=e69] [cursor=pointer]:
+                  - /url: /symfony/web/index.php/admin/viewEmailNotification
+              - listitem [ref=e70]:
+                - link "Localization" [ref=e71] [cursor=pointer]:
+                  - /url: /symfony/web/index.php/admin/localization
+              - listitem [ref=e72]:
+                - link "Language Packages" [ref=e73] [cursor=pointer]:
+                  - /url: /symfony/web/index.php/admin/languagePackage
+              - listitem [ref=e74]:
+                - link "Modules" [ref=e75] [cursor=pointer]:
+                  - /url: /symfony/web/index.php/admin/viewModules
+              - listitem [ref=e76]:
+                - link "Social Media Authentication" [ref=e77] [cursor=pointer]:
+                  - /url: /symfony/web/index.php/admin/openIdProvider
+              - listitem [ref=e78]:
+                - link "Register OAuth Client" [ref=e79] [cursor=pointer]:
+                  - /url: /symfony/web/index.php/admin/registerOAuthClient
+      - listitem [ref=e80]:
+        - link "PIM" [ref=e81] [cursor=pointer]:
+          - /url: /symfony/web/index.php/pim/viewPimModule
+          - generic [ref=e82]: PIM
+        - list [ref=e83]:
+          - listitem [ref=e84]:
+            - link "Configuration" [ref=e85] [cursor=pointer]:
+              - /url: "#"
+            - list [ref=e86]:
+              - listitem [ref=e87]:
+                - link "Optional Fields" [ref=e88] [cursor=pointer]:
+                  - /url: /symfony/web/index.php/pim/configurePim
+              - listitem [ref=e89]:
+                - link "Custom Fields" [ref=e90] [cursor=pointer]:
+                  - /url: /symfony/web/index.php/pim/listCustomFields
+              - listitem [ref=e91]:
+                - link "Data Import" [ref=e92] [cursor=pointer]:
+                  - /url: /symfony/web/index.php/admin/pimCsvImport
+              - listitem [ref=e93]:
+                - link "Reporting Methods" [ref=e94] [cursor=pointer]:
+                  - /url: /symfony/web/index.php/pim/viewReportingMethods
+              - listitem [ref=e95]:
+                - link "Termination Reasons" [ref=e96] [cursor=pointer]:
+                  - /url: /symfony/web/index.php/pim/viewTerminationReasons
+          - listitem [ref=e97]:
+            - link "Employee List" [ref=e98] [cursor=pointer]:
+              - /url: /symfony/web/index.php/pim/viewEmployeeList/reset/1
+          - listitem [ref=e99]:
+            - link "Add Employee" [ref=e100] [cursor=pointer]:
+              - /url: /symfony/web/index.php/pim/addEmployee
+          - listitem [ref=e101]:
+            - link "Reports" [ref=e102] [cursor=pointer]:
+              - /url: /symfony/web/index.php/core/viewDefinedPredefinedReports/reportGroup/3/reportType/PIM_DEFINED
+      - listitem [ref=e103]:
+        - link "Leave" [ref=e104] [cursor=pointer]:
+          - /url: /symfony/web/index.php/leave/viewLeaveModule
+          - generic [ref=e105]: Leave
+        - list [ref=e106]:
+          - listitem
+      - listitem [ref=e107]:
+        - link "Time" [ref=e108] [cursor=pointer]:
+          - /url: /symfony/web/index.php/time/viewTimeModule
+          - generic [ref=e109]: Time
+        - list [ref=e110]:
+          - listitem [ref=e111]:
+            - link "Timesheets" [ref=e112] [cursor=pointer]:
+              - /url: "#"
+            - list [ref=e113]:
+              - listitem [ref=e114]:
+                - link "My Timesheets" [ref=e115] [cursor=pointer]:
+                  - /url: /symfony/web/index.php/time/viewMyTimesheet
+              - listitem [ref=e116]:
+                - link "Employee Timesheets" [ref=e117] [cursor=pointer]:
+                  - /url: /symfony/web/index.php/time/viewEmployeeTimesheet
+          - listitem [ref=e118]:
+            - link "Attendance" [ref=e119] [cursor=pointer]:
+              - /url: "#"
+            - list [ref=e120]:
+              - listitem [ref=e121]:
+                - link "My Records" [ref=e122] [cursor=pointer]:
+                  - /url: /symfony/web/index.php/attendance/viewMyAttendanceRecord
+              - listitem [ref=e123]:
+                - link "Punch In/Out" [ref=e124] [cursor=pointer]:
+                  - /url: /symfony/web/index.php/attendance/punchIn
+              - listitem [ref=e125]:
+                - link "Employee Records" [ref=e126] [cursor=pointer]:
+                  - /url: /symfony/web/index.php/attendance/viewAttendanceRecord
+              - listitem [ref=e127]:
+                - link "Configuration" [ref=e128] [cursor=pointer]:
+                  - /url: /symfony/web/index.php/attendance/configure
+          - listitem [ref=e129]:
+            - link "Reports" [ref=e130] [cursor=pointer]:
+              - /url: "#"
+            - list [ref=e131]:
+              - listitem [ref=e132]:
+                - link "Project Reports" [ref=e133] [cursor=pointer]:
+                  - /url: /symfony/web/index.php/time/displayProjectReportCriteria?reportId=1
+              - listitem [ref=e134]:
+                - link "Employee Reports" [ref=e135] [cursor=pointer]:
+                  - /url: /symfony/web/index.php/time/displayEmployeeReportCriteria?reportId=2
+              - listitem [ref=e136]:
+                - link "Attendance Summary" [ref=e137] [cursor=pointer]:
+                  - /url: /symfony/web/index.php/time/displayAttendanceSummaryReportCriteria?reportId=4
+          - listitem [ref=e138]:
+            - link "Project Info" [ref=e139] [cursor=pointer]:
+              - /url: "#"
+            - list [ref=e140]:
+              - listitem [ref=e141]:
+                - link "Customers" [ref=e142] [cursor=pointer]:
+                  - /url: /symfony/web/index.php/admin/viewCustomers
+              - listitem [ref=e143]:
+                - link "Projects" [ref=e144] [cursor=pointer]:
+                  - /url: /symfony/web/index.php/admin/viewProjects
+      - listitem [ref=e145]:
+        - link "Recruitment" [ref=e146] [cursor=pointer]:
+          - /url: /symfony/web/index.php/recruitment/viewRecruitmentModule
+          - generic [ref=e147]: Recruitment
+        - list [ref=e148]:
+          - listitem [ref=e149]:
+            - link "Candidates" [ref=e150] [cursor=pointer]:
+              - /url: /symfony/web/index.php/recruitment/viewCandidates
+          - listitem [ref=e151]:
+            - link "Vacancies" [ref=e152] [cursor=pointer]:
+              - /url: /symfony/web/index.php/recruitment/viewJobVacancy
+      - listitem [ref=e153]:
+        - link "My Info" [ref=e154] [cursor=pointer]:
+          - /url: /symfony/web/index.php/pim/viewMyDetails
+          - generic [ref=e155]: My Info
+        - list [ref=e156]:
+          - listitem
+      - listitem [ref=e157]:
+        - link "Performance" [ref=e158] [cursor=pointer]:
+          - /url: "#"
+          - generic [ref=e159]: Performance
+        - list [ref=e160]:
+          - listitem [ref=e161]:
+            - link "Configure" [ref=e162] [cursor=pointer]:
+              - /url: "#"
+            - list [ref=e163]:
+              - listitem [ref=e164]:
+                - link "KPIs" [ref=e165] [cursor=pointer]:
+                  - /url: /symfony/web/index.php/performance/searchKpi
+              - listitem [ref=e166]:
+                - link "Trackers" [ref=e167] [cursor=pointer]:
+                  - /url: /symfony/web/index.php/performance/addPerformanceTracker
+          - listitem [ref=e168]:
+            - link "Manage Reviews" [ref=e169] [cursor=pointer]:
+              - /url: "#"
+            - list [ref=e170]:
+              - listitem [ref=e171]:
+                - link "Manage Reviews" [ref=e172] [cursor=pointer]:
+                  - /url: /symfony/web/index.php/performance/searchPerformancReview
+              - listitem [ref=e173]:
+                - link "My Reviews" [ref=e174] [cursor=pointer]:
+                  - /url: /symfony/web/index.php/performance/myPerformanceReview
+              - listitem [ref=e175]:
+                - link "Review List" [ref=e176] [cursor=pointer]:
+                  - /url: /symfony/web/index.php/performance/searchEvaluatePerformancReview
+          - listitem [ref=e177]:
+            - link "My Trackers" [ref=e178] [cursor=pointer]:
+              - /url: /symfony/web/index.php/performance/viewMyPerformanceTrackerList
+          - listitem [ref=e179]:
+            - link "Employee Trackers" [ref=e180] [cursor=pointer]:
+              - /url: /symfony/web/index.php/performance/viewEmployeePerformanceTrackerList
+      - listitem [ref=e181]:
+        - link "Dashboard" [ref=e182] [cursor=pointer]:
+          - /url: /symfony/web/index.php/dashboard
+          - generic [ref=e183]: Dashboard
+        - list [ref=e184]:
+          - listitem
+      - listitem [ref=e185]:
+        - link "Directory" [ref=e186] [cursor=pointer]:
+          - /url: /symfony/web/index.php/directory/viewDirectory/reset/1
+          - generic [ref=e187]: Directory
+        - list [ref=e188]:
+          - listitem
+      - listitem [ref=e189]:
+        - link "Maintenance" [ref=e190] [cursor=pointer]:
+          - /url: /symfony/web/index.php/maintenance/purgeEmployee
+          - generic [ref=e191]: Maintenance
+        - list [ref=e192]:
+          - listitem [ref=e193]:
+            - link "Purge Records" [ref=e194] [cursor=pointer]:
+              - /url: "#"
+            - list [ref=e195]:
+              - listitem [ref=e196]:
+                - link "Employee Records" [ref=e197] [cursor=pointer]:
+                  - /url: /symfony/web/index.php/maintenance/purgeEmployee
+              - listitem [ref=e198]:
+                - link "Candidate Records" [ref=e199] [cursor=pointer]:
+                  - /url: /symfony/web/index.php/maintenance/purgeCandidateData
+          - listitem [ref=e200]:
+            - link "Access Records" [ref=e201] [cursor=pointer]:
+              - /url: /symfony/web/index.php/maintenance/accessEmployeeData
+      - listitem [ref=e202]:
+        - link "Buzz" [ref=e203] [cursor=pointer]:
+          - /url: /symfony/web/index.php/buzz/viewBuzz
+          - generic [ref=e204]: Buzz
+        - list [ref=e205]:
+          - listitem
+    - generic [ref=e206]:
+      - generic [ref=e207]:
+        - heading "Employee Information" [level=1] [ref=e209]
+        - group [ref=e212]:
+          - list [ref=e213]:
+            - listitem [ref=e214]:
+              - generic [ref=e215]: Employee Name
+              - textbox [ref=e216]: Type for hints...
+            - listitem [ref=e217]:
+              - generic [ref=e218]: Id
+              - textbox "Id" [ref=e219]: Type Employee Id...
+            - listitem [ref=e220]:
+              - generic [ref=e221]: Employment Status
+              - combobox "Employment Status" [ref=e222]:
+                - option "All" [selected]
+            - listitem [ref=e223]:
+              - generic [ref=e224]: Include
+              - combobox "Include" [ref=e225]:
+                - option "Current Employees Only" [selected]
+                - option "Current and Past Employees"
+                - option "Past Employees Only"
+            - listitem [ref=e226]:
+              - generic [ref=e227]: Supervisor Name
+              - textbox "Supervisor Name" [ref=e228]: Type for hints...
+            - listitem [ref=e229]:
+              - generic [ref=e230]: Job Title
+              - combobox "Job Title" [ref=e231]:
+                - option "All" [selected]
+            - listitem [ref=e232]:
+              - generic [ref=e233]: Sub Unit
+              - combobox "Sub Unit" [ref=e234]:
+                - option "All" [selected]
+          - paragraph [ref=e235]:
+            - button "Search" [ref=e236]
+            - button "Reset" [ref=e237]
+        - link ">" [ref=e238] [cursor=pointer]:
+          - /url: "#"
+      - generic [ref=e241]:
+        - generic [ref=e242]:
+          - button "Add" [ref=e243]
+          - button "Delete" [disabled] [ref=e244]
+          - list [ref=e245]:
+            - listitem [ref=e246]: 1-50 of 436
+            - listitem:
+              - link "First" [ref=e247] [cursor=pointer]:
+                - /url: javascript:submitPage(1)
+            - listitem:
+              - link "Previous" [ref=e248] [cursor=pointer]:
+                - /url: javascript:submitPage(1)
+            - listitem:
+              - link "1" [ref=e249] [cursor=pointer]:
+                - /url: "#"
+            - listitem:
+              - link "2" [ref=e250] [cursor=pointer]:
+                - /url: javascript:submitPage(2)
+            - listitem:
+              - link "3" [ref=e251] [cursor=pointer]:
+                - /url: javascript:submitPage(3)
+            - listitem:
+              - link "4" [ref=e252] [cursor=pointer]:
+                - /url: javascript:submitPage(4)
+            - listitem:
+              - link "5" [ref=e253] [cursor=pointer]:
+                - /url: javascript:submitPage(5)
+            - listitem:
+              - link "Next" [ref=e254] [cursor=pointer]:
+                - /url: javascript:submitPage(2)
+            - listitem:
+              - link "Last" [ref=e255] [cursor=pointer]:
+                - /url: javascript:submitPage(9)
+        - table [ref=e259]:
+          - rowgroup [ref=e260]:
+            - row "Id First (& Middle) Name Last Name Job Title Employment Status Sub Unit Supervisor" [ref=e261]:
+              - columnheader [ref=e262]:
+                - checkbox [ref=e263]
+              - columnheader "Id" [ref=e264] [cursor=pointer]:
+                - link "Id" [ref=e265]:
+                  - /url: http://orangehrm.qedgetech.com/symfony/web/index.php/pim/viewEmployeeList?sortField=employeeId&sortOrder=ASC
+              - columnheader "First (& Middle) Name" [ref=e266] [cursor=pointer]:
+                - link "First (& Middle) Name" [ref=e267]:
+                  - /url: http://orangehrm.qedgetech.com/symfony/web/index.php/pim/viewEmployeeList?sortField=firstMiddleName&sortOrder=ASC
+              - columnheader "Last Name" [ref=e268] [cursor=pointer]:
+                - link "Last Name" [ref=e269]:
+                  - /url: http://orangehrm.qedgetech.com/symfony/web/index.php/pim/viewEmployeeList?sortField=lastName&sortOrder=ASC
+              - columnheader "Job Title" [ref=e270] [cursor=pointer]:
+                - link "Job Title" [ref=e271]:
+                  - /url: http://orangehrm.qedgetech.com/symfony/web/index.php/pim/viewEmployeeList?sortField=jobTitle&sortOrder=ASC
+              - columnheader "Employment Status" [ref=e272] [cursor=pointer]:
+                - link "Employment Status" [ref=e273]:
+                  - /url: http://orangehrm.qedgetech.com/symfony/web/index.php/pim/viewEmployeeList?sortField=employeeStatus&sortOrder=ASC
+              - columnheader "Sub Unit" [ref=e274] [cursor=pointer]:
+                - link "Sub Unit" [ref=e275]:
+                  - /url: http://orangehrm.qedgetech.com/symfony/web/index.php/pim/viewEmployeeList?sortField=subDivision&sortOrder=ASC
+              - columnheader "Supervisor" [ref=e276] [cursor=pointer]:
+                - link "Supervisor" [ref=e277]:
+                  - /url: http://orangehrm.qedgetech.com/symfony/web/index.php/pim/viewEmployeeList?sortField=supervisor&sortOrder=ASC
+          - rowgroup [ref=e278]:
+            - row "0365 < FirstName> < MiddleName> < LastName>" [ref=e279]:
+              - cell [ref=e280]:
+                - checkbox [ref=e281]
+              - cell "0365" [ref=e282]:
+                - link "0365" [ref=e283] [cursor=pointer]:
+                  - /url: /symfony/web/index.php/pim/viewEmployee/empNumber/359
+              - cell "< FirstName> < MiddleName>" [ref=e284]:
+                - link "< FirstName> < MiddleName>" [ref=e285] [cursor=pointer]:
+                  - /url: /symfony/web/index.php/pim/viewEmployee/empNumber/359
+              - cell "< LastName>" [ref=e286]:
+                - link "< LastName>" [ref=e287] [cursor=pointer]:
+                  - /url: /symfony/web/index.php/pim/viewEmployee/empNumber/359
+              - cell [ref=e288]
+              - cell [ref=e289]
+              - cell [ref=e290]
+              - cell [ref=e291]
+            - row "0366 < FirstName> < MiddleName> < LastName>" [ref=e292]:
+              - cell [ref=e293]:
+                - checkbox [ref=e294]
+              - cell "0366" [ref=e295]:
+                - link "0366" [ref=e296] [cursor=pointer]:
+                  - /url: /symfony/web/index.php/pim/viewEmployee/empNumber/360
+              - cell "< FirstName> < MiddleName>" [ref=e297]:
+                - link "< FirstName> < MiddleName>" [ref=e298] [cursor=pointer]:
+                  - /url: /symfony/web/index.php/pim/viewEmployee/empNumber/360
+              - cell "< LastName>" [ref=e299]:
+                - link "< LastName>" [ref=e300] [cursor=pointer]:
+                  - /url: /symfony/web/index.php/pim/viewEmployee/empNumber/360
+              - cell [ref=e301]
+              - cell [ref=e302]
+              - cell [ref=e303]
+              - cell [ref=e304]
+            - row "0367 < FirstName> < MiddleName> < LastName>" [ref=e305]:
+              - cell [ref=e306]:
+                - checkbox [ref=e307]
+              - cell "0367" [ref=e308]:
+                - link "0367" [ref=e309] [cursor=pointer]:
+                  - /url: /symfony/web/index.php/pim/viewEmployee/empNumber/361
+              - cell "< FirstName> < MiddleName>" [ref=e310]:
+                - link "< FirstName> < MiddleName>" [ref=e311] [cursor=pointer]:
+                  - /url: /symfony/web/index.php/pim/viewEmployee/empNumber/361
+              - cell "< LastName>" [ref=e312]:
+                - link "< LastName>" [ref=e313] [cursor=pointer]:
+                  - /url: /symfony/web/index.php/pim/viewEmployee/empNumber/361
+              - cell [ref=e314]
+              - cell [ref=e315]
+              - cell [ref=e316]
+              - cell [ref=e317]
+            - row "0368 < FirstName> < MiddleName> < LastName>" [ref=e318]:
+              - cell [ref=e319]:
+                - checkbox [ref=e320]
+              - cell "0368" [ref=e321]:
+                - link "0368" [ref=e322] [cursor=pointer]:
+                  - /url: /symfony/web/index.php/pim/viewEmployee/empNumber/362
+              - cell "< FirstName> < MiddleName>" [ref=e323]:
+                - link "< FirstName> < MiddleName>" [ref=e324] [cursor=pointer]:
+                  - /url: /symfony/web/index.php/pim/viewEmployee/empNumber/362
+              - cell "< LastName>" [ref=e325]:
+                - link "< LastName>" [ref=e326] [cursor=pointer]:
+                  - /url: /symfony/web/index.php/pim/viewEmployee/empNumber/362
+              - cell [ref=e327]
+              - cell [ref=e328]
+              - cell [ref=e329]
+              - cell [ref=e330]
+            - row "0369 < FirstName> < MiddleName> < LastName>" [ref=e331]:
+              - cell [ref=e332]:
+                - checkbox [ref=e333]
+              - cell "0369" [ref=e334]:
+                - link "0369" [ref=e335] [cursor=pointer]:
+                  - /url: /symfony/web/index.php/pim/viewEmployee/empNumber/363
+              - cell "< FirstName> < MiddleName>" [ref=e336]:
+                - link "< FirstName> < MiddleName>" [ref=e337] [cursor=pointer]:
+                  - /url: /symfony/web/index.php/pim/viewEmployee/empNumber/363
+              - cell "< LastName>" [ref=e338]:
+                - link "< LastName>" [ref=e339] [cursor=pointer]:
+                  - /url: /symfony/web/index.php/pim/viewEmployee/empNumber/363
+              - cell [ref=e340]
+              - cell [ref=e341]
+              - cell [ref=e342]
+              - cell [ref=e343]
+            - row "0370 < FirstName> < MiddleName> < LastName>" [ref=e344]:
+              - cell [ref=e345]:
+                - checkbox [ref=e346]
+              - cell "0370" [ref=e347]:
+                - link "0370" [ref=e348] [cursor=pointer]:
+                  - /url: /symfony/web/index.php/pim/viewEmployee/empNumber/364
+              - cell "< FirstName> < MiddleName>" [ref=e349]:
+                - link "< FirstName> < MiddleName>" [ref=e350] [cursor=pointer]:
+                  - /url: /symfony/web/index.php/pim/viewEmployee/empNumber/364
+              - cell "< LastName>" [ref=e351]:
+                - link "< LastName>" [ref=e352] [cursor=pointer]:
+                  - /url: /symfony/web/index.php/pim/viewEmployee/empNumber/364
+              - cell [ref=e353]
+              - cell [ref=e354]
+              - cell [ref=e355]
+              - cell [ref=e356]
+            - row "0371 < FirstName> < MiddleName> < LastName>" [ref=e357]:
+              - cell [ref=e358]:
+                - checkbox [ref=e359]
+              - cell "0371" [ref=e360]:
+                - link "0371" [ref=e361] [cursor=pointer]:
+                  - /url: /symfony/web/index.php/pim/viewEmployee/empNumber/365
+              - cell "< FirstName> < MiddleName>" [ref=e362]:
+                - link "< FirstName> < MiddleName>" [ref=e363] [cursor=pointer]:
+                  - /url: /symfony/web/index.php/pim/viewEmployee/empNumber/365
+              - cell "< LastName>" [ref=e364]:
+                - link "< LastName>" [ref=e365] [cursor=pointer]:
+                  - /url: /symfony/web/index.php/pim/viewEmployee/empNumber/365
+              - cell [ref=e366]
+              - cell [ref=e367]
+              - cell [ref=e368]
+              - cell [ref=e369]
+            - row "0372 < FirstName> < MiddleName> < LastName>" [ref=e370]:
+              - cell [ref=e371]:
+                - checkbox [ref=e372]
+              - cell "0372" [ref=e373]:
+                - link "0372" [ref=e374] [cursor=pointer]:
+                  - /url: /symfony/web/index.php/pim/viewEmployee/empNumber/366
+              - cell "< FirstName> < MiddleName>" [ref=e375]:
+                - link "< FirstName> < MiddleName>" [ref=e376] [cursor=pointer]:
+                  - /url: /symfony/web/index.php/pim/viewEmployee/empNumber/366
+              - cell "< LastName>" [ref=e377]:
+                - link "< LastName>" [ref=e378] [cursor=pointer]:
+                  - /url: /symfony/web/index.php/pim/viewEmployee/empNumber/366
+              - cell [ref=e379]
+              - cell [ref=e380]
+              - cell [ref=e381]
+              - cell [ref=e382]
+            - row "0373 < FirstName> < MiddleName> < LastName>" [ref=e383]:
+              - cell [ref=e384]:
+                - checkbox [ref=e385]
+              - cell "0373" [ref=e386]:
+                - link "0373" [ref=e387] [cursor=pointer]:
+                  - /url: /symfony/web/index.php/pim/viewEmployee/empNumber/367
+              - cell "< FirstName> < MiddleName>" [ref=e388]:
+                - link "< FirstName> < MiddleName>" [ref=e389] [cursor=pointer]:
+                  - /url: /symfony/web/index.php/pim/viewEmployee/empNumber/367
+              - cell "< LastName>" [ref=e390]:
+                - link "< LastName>" [ref=e391] [cursor=pointer]:
+                  - /url: /symfony/web/index.php/pim/viewEmployee/empNumber/367
+              - cell [ref=e392]
+              - cell [ref=e393]
+              - cell [ref=e394]
+              - cell [ref=e395]
+            - row "0374 < FirstName> < MiddleName> < LastName>" [ref=e396]:
+              - cell [ref=e397]:
+                - checkbox [ref=e398]
+              - cell "0374" [ref=e399]:
+                - link "0374" [ref=e400] [cursor=pointer]:
+                  - /url: /symfony/web/index.php/pim/viewEmployee/empNumber/368
+              - cell "< FirstName> < MiddleName>" [ref=e401]:
+                - link "< FirstName> < MiddleName>" [ref=e402] [cursor=pointer]:
+                  - /url: /symfony/web/index.php/pim/viewEmployee/empNumber/368
+              - cell "< LastName>" [ref=e403]:
+                - link "< LastName>" [ref=e404] [cursor=pointer]:
+                  - /url: /symfony/web/index.php/pim/viewEmployee/empNumber/368
+              - cell [ref=e405]
+              - cell [ref=e406]
+              - cell [ref=e407]
+              - cell [ref=e408]
+            - row "0375 < FirstName> < MiddleName> < LastName>" [ref=e409]:
+              - cell [ref=e410]:
+                - checkbox [ref=e411]
+              - cell "0375" [ref=e412]:
+                - link "0375" [ref=e413] [cursor=pointer]:
+                  - /url: /symfony/web/index.php/pim/viewEmployee/empNumber/369
+              - cell "< FirstName> < MiddleName>" [ref=e414]:
+                - link "< FirstName> < MiddleName>" [ref=e415] [cursor=pointer]:
+                  - /url: /symfony/web/index.php/pim/viewEmployee/empNumber/369
+              - cell "< LastName>" [ref=e416]:
+                - link "< LastName>" [ref=e417] [cursor=pointer]:
+                  - /url: /symfony/web/index.php/pim/viewEmployee/empNumber/369
+              - cell [ref=e418]
+              - cell [ref=e419]
+              - cell [ref=e420]
+              - cell [ref=e421]
+            - row "0376 < FirstName> < MiddleName> < LastName>" [ref=e422]:
+              - cell [ref=e423]:
+                - checkbox [ref=e424]
+              - cell "0376" [ref=e425]:
+                - link "0376" [ref=e426] [cursor=pointer]:
+                  - /url: /symfony/web/index.php/pim/viewEmployee/empNumber/370
+              - cell "< FirstName> < MiddleName>" [ref=e427]:
+                - link "< FirstName> < MiddleName>" [ref=e428] [cursor=pointer]:
+                  - /url: /symfony/web/index.php/pim/viewEmployee/empNumber/370
+              - cell "< LastName>" [ref=e429]:
+                - link "< LastName>" [ref=e430] [cursor=pointer]:
+                  - /url: /symfony/web/index.php/pim/viewEmployee/empNumber/370
+              - cell [ref=e431]
+              - cell [ref=e432]
+              - cell [ref=e433]
+              - cell [ref=e434]
+            - row "0377 < FirstName> < MiddleName> < LastName>" [ref=e435]:
+              - cell [ref=e436]:
+                - checkbox [ref=e437]
+              - cell "0377" [ref=e438]:
+                - link "0377" [ref=e439] [cursor=pointer]:
+                  - /url: /symfony/web/index.php/pim/viewEmployee/empNumber/371
+              - cell "< FirstName> < MiddleName>" [ref=e440]:
+                - link "< FirstName> < MiddleName>" [ref=e441] [cursor=pointer]:
+                  - /url: /symfony/web/index.php/pim/viewEmployee/empNumber/371
+              - cell "< LastName>" [ref=e442]:
+                - link "< LastName>" [ref=e443] [cursor=pointer]:
+                  - /url: /symfony/web/index.php/pim/viewEmployee/empNumber/371
+              - cell [ref=e444]
+              - cell [ref=e445]
+              - cell [ref=e446]
+              - cell [ref=e447]
+            - row "0378 < FirstName> < MiddleName> < LastName>" [ref=e448]:
+              - cell [ref=e449]:
+                - checkbox [ref=e450]
+              - cell "0378" [ref=e451]:
+                - link "0378" [ref=e452] [cursor=pointer]:
+                  - /url: /symfony/web/index.php/pim/viewEmployee/empNumber/372
+              - cell "< FirstName> < MiddleName>" [ref=e453]:
+                - link "< FirstName> < MiddleName>" [ref=e454] [cursor=pointer]:
+                  - /url: /symfony/web/index.php/pim/viewEmployee/empNumber/372
+              - cell "< LastName>" [ref=e455]:
+                - link "< LastName>" [ref=e456] [cursor=pointer]:
+                  - /url: /symfony/web/index.php/pim/viewEmployee/empNumber/372
+              - cell [ref=e457]
+              - cell [ref=e458]
+              - cell [ref=e459]
+              - cell [ref=e460]
+            - row "0379 < FirstName> < MiddleName> < LastName>" [ref=e461]:
+              - cell [ref=e462]:
+                - checkbox [ref=e463]
+              - cell "0379" [ref=e464]:
+                - link "0379" [ref=e465] [cursor=pointer]:
+                  - /url: /symfony/web/index.php/pim/viewEmployee/empNumber/373
+              - cell "< FirstName> < MiddleName>" [ref=e466]:
+                - link "< FirstName> < MiddleName>" [ref=e467] [cursor=pointer]:
+                  - /url: /symfony/web/index.php/pim/viewEmployee/empNumber/373
+              - cell "< LastName>" [ref=e468]:
+                - link "< LastName>" [ref=e469] [cursor=pointer]:
+                  - /url: /symfony/web/index.php/pim/viewEmployee/empNumber/373
+              - cell [ref=e470]
+              - cell [ref=e471]
+              - cell [ref=e472]
+              - cell [ref=e473]
+            - row "0380 < FirstName> < MiddleName> < LastName>" [ref=e474]:
+              - cell [ref=e475]:
+                - checkbox [ref=e476]
+              - cell "0380" [ref=e477]:
+                - link "0380" [ref=e478] [cursor=pointer]:
+                  - /url: /symfony/web/index.php/pim/viewEmployee/empNumber/374
+              - cell "< FirstName> < MiddleName>" [ref=e479]:
+                - link "< FirstName> < MiddleName>" [ref=e480] [cursor=pointer]:
+                  - /url: /symfony/web/index.php/pim/viewEmployee/empNumber/374
+              - cell "< LastName>" [ref=e481]:
+                - link "< LastName>" [ref=e482] [cursor=pointer]:
+                  - /url: /symfony/web/index.php/pim/viewEmployee/empNumber/374
+              - cell [ref=e483]
+              - cell [ref=e484]
+              - cell [ref=e485]
+              - cell [ref=e486]
+            - row "0381 < FirstName> < MiddleName> < LastName>" [ref=e487]:
+              - cell [ref=e488]:
+                - checkbox [ref=e489]
+              - cell "0381" [ref=e490]:
+                - link "0381" [ref=e491] [cursor=pointer]:
+                  - /url: /symfony/web/index.php/pim/viewEmployee/empNumber/375
+              - cell "< FirstName> < MiddleName>" [ref=e492]:
+                - link "< FirstName> < MiddleName>" [ref=e493] [cursor=pointer]:
+                  - /url: /symfony/web/index.php/pim/viewEmployee/empNumber/375
+              - cell "< LastName>" [ref=e494]:
+                - link "< LastName>" [ref=e495] [cursor=pointer]:
+                  - /url: /symfony/web/index.php/pim/viewEmployee/empNumber/375
+              - cell [ref=e496]
+              - cell [ref=e497]
+              - cell [ref=e498]
+              - cell [ref=e499]
+            - row "0382 < FirstName> < MiddleName> < LastName>" [ref=e500]:
+              - cell [ref=e501]:
+                - checkbox [ref=e502]
+              - cell "0382" [ref=e503]:
+                - link "0382" [ref=e504] [cursor=pointer]:
+                  - /url: /symfony/web/index.php/pim/viewEmployee/empNumber/376
+              - cell "< FirstName> < MiddleName>" [ref=e505]:
+                - link "< FirstName> < MiddleName>" [ref=e506] [cursor=pointer]:
+                  - /url: /symfony/web/index.php/pim/viewEmployee/empNumber/376
+              - cell "< LastName>" [ref=e507]:
+                - link "< LastName>" [ref=e508] [cursor=pointer]:
+                  - /url: /symfony/web/index.php/pim/viewEmployee/empNumber/376
+              - cell [ref=e509]
+              - cell [ref=e510]
+              - cell [ref=e511]
+              - cell [ref=e512]
+            - row "0383 < FirstName> < MiddleName> < LastName>" [ref=e513]:
+              - cell [ref=e514]:
+                - checkbox [ref=e515]
+              - cell "0383" [ref=e516]:
+                - link "0383" [ref=e517] [cursor=pointer]:
+                  - /url: /symfony/web/index.php/pim/viewEmployee/empNumber/377
+              - cell "< FirstName> < MiddleName>" [ref=e518]:
+                - link "< FirstName> < MiddleName>" [ref=e519] [cursor=pointer]:
+                  - /url: /symfony/web/index.php/pim/viewEmployee/empNumber/377
+              - cell "< LastName>" [ref=e520]:
+                - link "< LastName>" [ref=e521] [cursor=pointer]:
+                  - /url: /symfony/web/index.php/pim/viewEmployee/empNumber/377
+              - cell [ref=e522]
+              - cell [ref=e523]
+              - cell [ref=e524]
+              - cell [ref=e525]
+            - row "0384 < FirstName> < MiddleName> < LastName>" [ref=e526]:
+              - cell [ref=e527]:
+                - checkbox [ref=e528]
+              - cell "0384" [ref=e529]:
+                - link "0384" [ref=e530] [cursor=pointer]:
+                  - /url: /symfony/web/index.php/pim/viewEmployee/empNumber/378
+              - cell "< FirstName> < MiddleName>" [ref=e531]:
+                - link "< FirstName> < MiddleName>" [ref=e532] [cursor=pointer]:
+                  - /url: /symfony/web/index.php/pim/viewEmployee/empNumber/378
+              - cell "< LastName>" [ref=e533]:
+                - link "< LastName>" [ref=e534] [cursor=pointer]:
+                  - /url: /symfony/web/index.php/pim/viewEmployee/empNumber/378
+              - cell [ref=e535]
+              - cell [ref=e536]
+              - cell [ref=e537]
+              - cell [ref=e538]
+            - row "0386 < FirstName> < MiddleName> < LastName>" [ref=e539]:
+              - cell [ref=e540]:
+                - checkbox [ref=e541]
+              - cell "0386" [ref=e542]:
+                - link "0386" [ref=e543] [cursor=pointer]:
+                  - /url: /symfony/web/index.php/pim/viewEmployee/empNumber/380
+              - cell "< FirstName> < MiddleName>" [ref=e544]:
+                - link "< FirstName> < MiddleName>" [ref=e545] [cursor=pointer]:
+                  - /url: /symfony/web/index.php/pim/viewEmployee/empNumber/380
+              - cell "< LastName>" [ref=e546]:
+                - link "< LastName>" [ref=e547] [cursor=pointer]:
+                  - /url: /symfony/web/index.php/pim/viewEmployee/empNumber/380
+              - cell [ref=e548]
+              - cell [ref=e549]
+              - cell [ref=e550]
+              - cell [ref=e551]
+            - row "0387 < FirstName> < MiddleName> < LastName>" [ref=e552]:
+              - cell [ref=e553]:
+                - checkbox [ref=e554]
+              - cell "0387" [ref=e555]:
+                - link "0387" [ref=e556] [cursor=pointer]:
+                  - /url: /symfony/web/index.php/pim/viewEmployee/empNumber/381
+              - cell "< FirstName> < MiddleName>" [ref=e557]:
+                - link "< FirstName> < MiddleName>" [ref=e558] [cursor=pointer]:
+                  - /url: /symfony/web/index.php/pim/viewEmployee/empNumber/381
+              - cell "< LastName>" [ref=e559]:
+                - link "< LastName>" [ref=e560] [cursor=pointer]:
+                  - /url: /symfony/web/index.php/pim/viewEmployee/empNumber/381
+              - cell [ref=e561]
+              - cell [ref=e562]
+              - cell [ref=e563]
+              - cell [ref=e564]
+            - row "0388 < FirstName> < MiddleName> < LastName>" [ref=e565]:
+              - cell [ref=e566]:
+                - checkbox [ref=e567]
+              - cell "0388" [ref=e568]:
+                - link "0388" [ref=e569] [cursor=pointer]:
+                  - /url: /symfony/web/index.php/pim/viewEmployee/empNumber/382
+              - cell "< FirstName> < MiddleName>" [ref=e570]:
+                - link "< FirstName> < MiddleName>" [ref=e571] [cursor=pointer]:
+                  - /url: /symfony/web/index.php/pim/viewEmployee/empNumber/382
+              - cell "< LastName>" [ref=e572]:
+                - link "< LastName>" [ref=e573] [cursor=pointer]:
+                  - /url: /symfony/web/index.php/pim/viewEmployee/empNumber/382
+              - cell [ref=e574]
+              - cell [ref=e575]
+              - cell [ref=e576]
+              - cell [ref=e577]
+            - row "0389 < FirstName> < MiddleName> < LastName>" [ref=e578]:
+              - cell [ref=e579]:
+                - checkbox [ref=e580]
+              - cell "0389" [ref=e581]:
+                - link "0389" [ref=e582] [cursor=pointer]:
+                  - /url: /symfony/web/index.php/pim/viewEmployee/empNumber/383
+              - cell "< FirstName> < MiddleName>" [ref=e583]:
+                - link "< FirstName> < MiddleName>" [ref=e584] [cursor=pointer]:
+                  - /url: /symfony/web/index.php/pim/viewEmployee/empNumber/383
+              - cell "< LastName>" [ref=e585]:
+                - link "< LastName>" [ref=e586] [cursor=pointer]:
+                  - /url: /symfony/web/index.php/pim/viewEmployee/empNumber/383
+              - cell [ref=e587]
+              - cell [ref=e588]
+              - cell [ref=e589]
+              - cell [ref=e590]
+            - row "0390 < FirstName> < MiddleName> < LastName>" [ref=e591]:
+              - cell [ref=e592]:
+                - checkbox [ref=e593]
+              - cell "0390" [ref=e594]:
+                - link "0390" [ref=e595] [cursor=pointer]:
+                  - /url: /symfony/web/index.php/pim/viewEmployee/empNumber/384
+              - cell "< FirstName> < MiddleName>" [ref=e596]:
+                - link "< FirstName> < MiddleName>" [ref=e597] [cursor=pointer]:
+                  - /url: /symfony/web/index.php/pim/viewEmployee/empNumber/384
+              - cell "< LastName>" [ref=e598]:
+                - link "< LastName>" [ref=e599] [cursor=pointer]:
+                  - /url: /symfony/web/index.php/pim/viewEmployee/empNumber/384
+              - cell [ref=e600]
+              - cell [ref=e601]
+              - cell [ref=e602]
+              - cell [ref=e603]
+            - row "0391 < FirstName> < MiddleName> < LastName>" [ref=e604]:
+              - cell [ref=e605]:
+                - checkbox [ref=e606]
+              - cell "0391" [ref=e607]:
+                - link "0391" [ref=e608] [cursor=pointer]:
+                  - /url: /symfony/web/index.php/pim/viewEmployee/empNumber/385
+              - cell "< FirstName> < MiddleName>" [ref=e609]:
+                - link "< FirstName> < MiddleName>" [ref=e610] [cursor=pointer]:
+                  - /url: /symfony/web/index.php/pim/viewEmployee/empNumber/385
+              - cell "< LastName>" [ref=e611]:
+                - link "< LastName>" [ref=e612] [cursor=pointer]:
+                  - /url: /symfony/web/index.php/pim/viewEmployee/empNumber/385
+              - cell [ref=e613]
+              - cell [ref=e614]
+              - cell [ref=e615]
+              - cell [ref=e616]
+            - row "999 Ajay A" [ref=e617]:
+              - cell [ref=e618]:
+                - checkbox [ref=e619]
+              - cell "999" [ref=e620]:
+                - link "999" [ref=e621] [cursor=pointer]:
+                  - /url: /symfony/web/index.php/pim/viewEmployee/empNumber/139
+              - cell "Ajay" [ref=e622]:
+                - link "Ajay" [ref=e623] [cursor=pointer]:
+                  - /url: /symfony/web/index.php/pim/viewEmployee/empNumber/139
+              - cell "A" [ref=e624]:
+                - link "A" [ref=e625] [cursor=pointer]:
+                  - /url: /symfony/web/index.php/pim/viewEmployee/empNumber/139
+              - cell [ref=e626]
+              - cell [ref=e627]
+              - cell [ref=e628]
+              - cell [ref=e629]
+            - row "0150 Abhishek A" [ref=e630]:
+              - cell [ref=e631]:
+                - checkbox [ref=e632]
+              - cell "0150" [ref=e633]:
+                - link "0150" [ref=e634] [cursor=pointer]:
+                  - /url: /symfony/web/index.php/pim/viewEmployee/empNumber/149
+              - cell "Abhishek" [ref=e635]:
+                - link "Abhishek" [ref=e636] [cursor=pointer]:
+                  - /url: /symfony/web/index.php/pim/viewEmployee/empNumber/149
+              - cell "A" [ref=e637]:
+                - link "A" [ref=e638] [cursor=pointer]:
+                  - /url: /symfony/web/index.php/pim/viewEmployee/empNumber/149
+              - cell [ref=e639]
+              - cell [ref=e640]
+              - cell [ref=e641]
+              - cell [ref=e642]
+            - row "0151 Ramesh A" [ref=e643]:
+              - cell [ref=e644]:
+                - checkbox [ref=e645]
+              - cell "0151" [ref=e646]:
+                - link "0151" [ref=e647] [cursor=pointer]:
+                  - /url: /symfony/web/index.php/pim/viewEmployee/empNumber/150
+              - cell "Ramesh" [ref=e648]:
+                - link "Ramesh" [ref=e649] [cursor=pointer]:
+                  - /url: /symfony/web/index.php/pim/viewEmployee/empNumber/150
+              - cell "A" [ref=e650]:
+                - link "A" [ref=e651] [cursor=pointer]:
+                  - /url: /symfony/web/index.php/pim/viewEmployee/empNumber/150
+              - cell [ref=e652]
+              - cell [ref=e653]
+              - cell [ref=e654]
+              - cell [ref=e655]
+            - row "0167 Nanda Kiran A" [ref=e656]:
+              - cell [ref=e657]:
+                - checkbox [ref=e658]
+              - cell "0167" [ref=e659]:
+                - link "0167" [ref=e660] [cursor=pointer]:
+                  - /url: /symfony/web/index.php/pim/viewEmployee/empNumber/166
+              - cell "Nanda Kiran" [ref=e661]:
+                - link "Nanda Kiran" [ref=e662] [cursor=pointer]:
+                  - /url: /symfony/web/index.php/pim/viewEmployee/empNumber/166
+              - cell "A" [ref=e663]:
+                - link "A" [ref=e664] [cursor=pointer]:
+                  - /url: /symfony/web/index.php/pim/viewEmployee/empNumber/166
+              - cell [ref=e665]
+              - cell [ref=e666]
+              - cell [ref=e667]
+              - cell [ref=e668]
+            - row "0168 Nanda Kiran A" [ref=e669]:
+              - cell [ref=e670]:
+                - checkbox [ref=e671]
+              - cell "0168" [ref=e672]:
+                - link "0168" [ref=e673] [cursor=pointer]:
+                  - /url: /symfony/web/index.php/pim/viewEmployee/empNumber/167
+              - cell "Nanda Kiran" [ref=e674]:
+                - link "Nanda Kiran" [ref=e675] [cursor=pointer]:
+                  - /url: /symfony/web/index.php/pim/viewEmployee/empNumber/167
+              - cell "A" [ref=e676]:
+                - link "A" [ref=e677] [cursor=pointer]:
+                  - /url: /symfony/web/index.php/pim/viewEmployee/empNumber/167
+              - cell [ref=e678]
+              - cell [ref=e679]
+              - cell [ref=e680]
+              - cell [ref=e681]
+            - row "0169 Nanda Kiran A" [ref=e682]:
+              - cell [ref=e683]:
+                - checkbox [ref=e684]
+              - cell "0169" [ref=e685]:
+                - link "0169" [ref=e686] [cursor=pointer]:
+                  - /url: /symfony/web/index.php/pim/viewEmployee/empNumber/168
+              - cell "Nanda Kiran" [ref=e687]:
+                - link "Nanda Kiran" [ref=e688] [cursor=pointer]:
+                  - /url: /symfony/web/index.php/pim/viewEmployee/empNumber/168
+              - cell "A" [ref=e689]:
+                - link "A" [ref=e690] [cursor=pointer]:
+                  - /url: /symfony/web/index.php/pim/viewEmployee/empNumber/168
+              - cell [ref=e691]
+              - cell [ref=e692]
+              - cell [ref=e693]
+              - cell [ref=e694]
+            - row "0170 A a a" [ref=e695]:
+              - cell [ref=e696]:
+                - checkbox [ref=e697]
+              - cell "0170" [ref=e698]:
+                - link "0170" [ref=e699] [cursor=pointer]:
+                  - /url: /symfony/web/index.php/pim/viewEmployee/empNumber/169
+              - cell "A a" [ref=e700]:
+                - link "A a" [ref=e701] [cursor=pointer]:
+                  - /url: /symfony/web/index.php/pim/viewEmployee/empNumber/169
+              - cell "a" [ref=e702]:
+                - link "a" [ref=e703] [cursor=pointer]:
+                  - /url: /symfony/web/index.php/pim/viewEmployee/empNumber/169
+              - cell [ref=e704]
+              - cell [ref=e705]
+              - cell [ref=e706]
+              - cell [ref=e707]
+            - row "0171 Nanda Kiran A" [ref=e708]:
+              - cell [ref=e709]:
+                - checkbox [ref=e710]
+              - cell "0171" [ref=e711]:
+                - link "0171" [ref=e712] [cursor=pointer]:
+                  - /url: /symfony/web/index.php/pim/viewEmployee/empNumber/170
+              - cell "Nanda Kiran" [ref=e713]:
+                - link "Nanda Kiran" [ref=e714] [cursor=pointer]:
+                  - /url: /symfony/web/index.php/pim/viewEmployee/empNumber/170
+              - cell "A" [ref=e715]:
+                - link "A" [ref=e716] [cursor=pointer]:
+                  - /url: /symfony/web/index.php/pim/viewEmployee/empNumber/170
+              - cell [ref=e717]
+              - cell [ref=e718]
+              - cell [ref=e719]
+              - cell [ref=e720]
+            - row "0172 Nanda Kiran A" [ref=e721]:
+              - cell [ref=e722]:
+                - checkbox [ref=e723]
+              - cell "0172" [ref=e724]:
+                - link "0172" [ref=e725] [cursor=pointer]:
+                  - /url: /symfony/web/index.php/pim/viewEmployee/empNumber/171
+              - cell "Nanda Kiran" [ref=e726]:
+                - link "Nanda Kiran" [ref=e727] [cursor=pointer]:
+                  - /url: /symfony/web/index.php/pim/viewEmployee/empNumber/171
+              - cell "A" [ref=e728]:
+                - link "A" [ref=e729] [cursor=pointer]:
+                  - /url: /symfony/web/index.php/pim/viewEmployee/empNumber/171
+              - cell [ref=e730]
+              - cell [ref=e731]
+              - cell [ref=e732]
+              - cell [ref=e733]
+            - row "0173 a a a" [ref=e734]:
+              - cell [ref=e735]:
+                - checkbox [ref=e736]
+              - cell "0173" [ref=e737]:
+                - link "0173" [ref=e738] [cursor=pointer]:
+                  - /url: /symfony/web/index.php/pim/viewEmployee/empNumber/172
+              - cell "a a" [ref=e739]:
+                - link "a a" [ref=e740] [cursor=pointer]:
+                  - /url: /symfony/web/index.php/pim/viewEmployee/empNumber/172
+              - cell "a" [ref=e741]:
+                - link "a" [ref=e742] [cursor=pointer]:
+                  - /url: /symfony/web/index.php/pim/viewEmployee/empNumber/172
+              - cell [ref=e743]
+              - cell [ref=e744]
+              - cell [ref=e745]
+              - cell [ref=e746]
+            - row "0174 Nanda Kiran A" [ref=e747]:
+              - cell [ref=e748]:
+                - checkbox [ref=e749]
+              - cell "0174" [ref=e750]:
+                - link "0174" [ref=e751] [cursor=pointer]:
+                  - /url: /symfony/web/index.php/pim/viewEmployee/empNumber/173
+              - cell "Nanda Kiran" [ref=e752]:
+                - link "Nanda Kiran" [ref=e753] [cursor=pointer]:
+                  - /url: /symfony/web/index.php/pim/viewEmployee/empNumber/173
+              - cell "A" [ref=e754]:
+                - link "A" [ref=e755] [cursor=pointer]:
+                  - /url: /symfony/web/index.php/pim/viewEmployee/empNumber/173
+              - cell [ref=e756]
+              - cell [ref=e757]
+              - cell [ref=e758]
+              - cell [ref=e759]
+            - row "0301 Varun A" [ref=e760]:
+              - cell [ref=e761]:
+                - checkbox [ref=e762]
+              - cell "0301" [ref=e763]:
+                - link "0301" [ref=e764] [cursor=pointer]:
+                  - /url: /symfony/web/index.php/pim/viewEmployee/empNumber/295
+              - cell "Varun" [ref=e765]:
+                - link "Varun" [ref=e766] [cursor=pointer]:
+                  - /url: /symfony/web/index.php/pim/viewEmployee/empNumber/295
+              - cell "A" [ref=e767]:
+                - link "A" [ref=e768] [cursor=pointer]:
+                  - /url: /symfony/web/index.php/pim/viewEmployee/empNumber/295
+              - cell [ref=e769]
+              - cell [ref=e770]
+              - cell [ref=e771]
+              - cell [ref=e772]
+            - row "0302 Varun A" [ref=e773]:
+              - cell [ref=e774]:
+                - checkbox [ref=e775]
+              - cell "0302" [ref=e776]:
+                - link "0302" [ref=e777] [cursor=pointer]:
+                  - /url: /symfony/web/index.php/pim/viewEmployee/empNumber/296
+              - cell "Varun" [ref=e778]:
+                - link "Varun" [ref=e779] [cursor=pointer]:
+                  - /url: /symfony/web/index.php/pim/viewEmployee/empNumber/296
+              - cell "A" [ref=e780]:
+                - link "A" [ref=e781] [cursor=pointer]:
+                  - /url: /symfony/web/index.php/pim/viewEmployee/empNumber/296
+              - cell [ref=e782]
+              - cell [ref=e783]
+              - cell [ref=e784]
+              - cell [ref=e785]
+            - row "0303 Varun A" [ref=e786]:
+              - cell [ref=e787]:
+                - checkbox [ref=e788]
+              - cell "0303" [ref=e789]:
+                - link "0303" [ref=e790] [cursor=pointer]:
+                  - /url: /symfony/web/index.php/pim/viewEmployee/empNumber/297
+              - cell "Varun" [ref=e791]:
+                - link "Varun" [ref=e792] [cursor=pointer]:
+                  - /url: /symfony/web/index.php/pim/viewEmployee/empNumber/297
+              - cell "A" [ref=e793]:
+                - link "A" [ref=e794] [cursor=pointer]:
+                  - /url: /symfony/web/index.php/pim/viewEmployee/empNumber/297
+              - cell [ref=e795]
+              - cell [ref=e796]
+              - cell [ref=e797]
+              - cell [ref=e798]
+            - row "0201 abc AB" [ref=e799]:
+              - cell [ref=e800]:
+                - checkbox [ref=e801]
+              - cell "0201" [ref=e802]:
+                - link "0201" [ref=e803] [cursor=pointer]:
+                  - /url: /symfony/web/index.php/pim/viewEmployee/empNumber/198
+              - cell "abc" [ref=e804]:
+                - link "abc" [ref=e805] [cursor=pointer]:
+                  - /url: /symfony/web/index.php/pim/viewEmployee/empNumber/198
+              - cell "AB" [ref=e806]:
+                - link "AB" [ref=e807] [cursor=pointer]:
+                  - /url: /symfony/web/index.php/pim/viewEmployee/empNumber/198
+              - cell [ref=e808]
+              - cell [ref=e809]
+              - cell [ref=e810]
+              - cell [ref=e811]
+            - row "0202 abc AB" [ref=e812]:
+              - cell [ref=e813]:
+                - checkbox [ref=e814]
+              - cell "0202" [ref=e815]:
+                - link "0202" [ref=e816] [cursor=pointer]:
+                  - /url: /symfony/web/index.php/pim/viewEmployee/empNumber/199
+              - cell "abc" [ref=e817]:
+                - link "abc" [ref=e818] [cursor=pointer]:
+                  - /url: /symfony/web/index.php/pim/viewEmployee/empNumber/199
+              - cell "AB" [ref=e819]:
+                - link "AB" [ref=e820] [cursor=pointer]:
+                  - /url: /symfony/web/index.php/pim/viewEmployee/empNumber/199
+              - cell [ref=e821]
+              - cell [ref=e822]
+              - cell [ref=e823]
+              - cell [ref=e824]
+            - row "0203 abbcd ABv" [ref=e825]:
+              - cell [ref=e826]:
+                - checkbox [ref=e827]
+              - cell "0203" [ref=e828]:
+                - link "0203" [ref=e829] [cursor=pointer]:
+                  - /url: /symfony/web/index.php/pim/viewEmployee/empNumber/200
+              - cell "abbcd" [ref=e830]:
+                - link "abbcd" [ref=e831] [cursor=pointer]:
+                  - /url: /symfony/web/index.php/pim/viewEmployee/empNumber/200
+              - cell "ABv" [ref=e832]:
+                - link "ABv" [ref=e833] [cursor=pointer]:
+                  - /url: /symfony/web/index.php/pim/viewEmployee/empNumber/200
+              - cell [ref=e834]
+              - cell [ref=e835]
+              - cell [ref=e836]
+              - cell [ref=e837]
+            - row "0204 abbcdd ABv" [ref=e838]:
+              - cell [ref=e839]:
+                - checkbox [ref=e840]
+              - cell "0204" [ref=e841]:
+                - link "0204" [ref=e842] [cursor=pointer]:
+                  - /url: /symfony/web/index.php/pim/viewEmployee/empNumber/201
+              - cell "abbcdd" [ref=e843]:
+                - link "abbcdd" [ref=e844] [cursor=pointer]:
+                  - /url: /symfony/web/index.php/pim/viewEmployee/empNumber/201
+              - cell "ABv" [ref=e845]:
+                - link "ABv" [ref=e846] [cursor=pointer]:
+                  - /url: /symfony/web/index.php/pim/viewEmployee/empNumber/201
+              - cell [ref=e847]
+              - cell [ref=e848]
+              - cell [ref=e849]
+              - cell [ref=e850]
+            - row "0205 abbcdd ABv" [ref=e851]:
+              - cell [ref=e852]:
+                - checkbox [ref=e853]
+              - cell "0205" [ref=e854]:
+                - link "0205" [ref=e855] [cursor=pointer]:
+                  - /url: /symfony/web/index.php/pim/viewEmployee/empNumber/202
+              - cell "abbcdd" [ref=e856]:
+                - link "abbcdd" [ref=e857] [cursor=pointer]:
+                  - /url: /symfony/web/index.php/pim/viewEmployee/empNumber/202
+              - cell "ABv" [ref=e858]:
+                - link "ABv" [ref=e859] [cursor=pointer]:
+                  - /url: /symfony/web/index.php/pim/viewEmployee/empNumber/202
+              - cell [ref=e860]
+              - cell [ref=e861]
+              - cell [ref=e862]
+              - cell [ref=e863]
+            - row "0406 Rashi Ahuja" [ref=e864]:
+              - cell [ref=e865]:
+                - checkbox [ref=e866]
+              - cell "0406" [ref=e867]:
+                - link "0406" [ref=e868] [cursor=pointer]:
+                  - /url: /symfony/web/index.php/pim/viewEmployee/empNumber/400
+              - cell "Rashi" [ref=e869]:
+                - link "Rashi" [ref=e870] [cursor=pointer]:
+                  - /url: /symfony/web/index.php/pim/viewEmployee/empNumber/400
+              - cell "Ahuja" [ref=e871]:
+                - link "Ahuja" [ref=e872] [cursor=pointer]:
+                  - /url: /symfony/web/index.php/pim/viewEmployee/empNumber/400
+              - cell [ref=e873]
+              - cell [ref=e874]
+              - cell [ref=e875]
+              - cell [ref=e876]
+            - row "0407 Rashi Ahuja" [ref=e877]:
+              - cell [ref=e878]:
+                - checkbox [ref=e879]
+              - cell "0407" [ref=e880]:
+                - link "0407" [ref=e881] [cursor=pointer]:
+                  - /url: /symfony/web/index.php/pim/viewEmployee/empNumber/401
+              - cell "Rashi" [ref=e882]:
+                - link "Rashi" [ref=e883] [cursor=pointer]:
+                  - /url: /symfony/web/index.php/pim/viewEmployee/empNumber/401
+              - cell "Ahuja" [ref=e884]:
+                - link "Ahuja" [ref=e885] [cursor=pointer]:
+                  - /url: /symfony/web/index.php/pim/viewEmployee/empNumber/401
+              - cell [ref=e886]
+              - cell [ref=e887]
+              - cell [ref=e888]
+              - cell [ref=e889]
+            - row "0408 Rashi Ahuja" [ref=e890]:
+              - cell [ref=e891]:
+                - checkbox [ref=e892]
+              - cell "0408" [ref=e893]:
+                - link "0408" [ref=e894] [cursor=pointer]:
+                  - /url: /symfony/web/index.php/pim/viewEmployee/empNumber/402
+              - cell "Rashi" [ref=e895]:
+                - link "Rashi" [ref=e896] [cursor=pointer]:
+                  - /url: /symfony/web/index.php/pim/viewEmployee/empNumber/402
+              - cell "Ahuja" [ref=e897]:
+                - link "Ahuja" [ref=e898] [cursor=pointer]:
+                  - /url: /symfony/web/index.php/pim/viewEmployee/empNumber/402
+              - cell [ref=e899]
+              - cell [ref=e900]
+              - cell [ref=e901]
+              - cell [ref=e902]
+            - row "0409 Rashi Ahuja" [ref=e903]:
+              - cell [ref=e904]:
+                - checkbox [ref=e905]
+              - cell "0409" [ref=e906]:
+                - link "0409" [ref=e907] [cursor=pointer]:
+                  - /url: /symfony/web/index.php/pim/viewEmployee/empNumber/403
+              - cell "Rashi" [ref=e908]:
+                - link "Rashi" [ref=e909] [cursor=pointer]:
+                  - /url: /symfony/web/index.php/pim/viewEmployee/empNumber/403
+              - cell "Ahuja" [ref=e910]:
+                - link "Ahuja" [ref=e911] [cursor=pointer]:
+                  - /url: /symfony/web/index.php/pim/viewEmployee/empNumber/403
+              - cell [ref=e912]
+              - cell [ref=e913]
+              - cell [ref=e914]
+              - cell [ref=e915]
+            - row "0410 Rashi Ahuja" [ref=e916]:
+              - cell [ref=e917]:
+                - checkbox [ref=e918]
+              - cell "0410" [ref=e919]:
+                - link "0410" [ref=e920] [cursor=pointer]:
+                  - /url: /symfony/web/index.php/pim/viewEmployee/empNumber/404
+              - cell "Rashi" [ref=e921]:
+                - link "Rashi" [ref=e922] [cursor=pointer]:
+                  - /url: /symfony/web/index.php/pim/viewEmployee/empNumber/404
+              - cell "Ahuja" [ref=e923]:
+                - link "Ahuja" [ref=e924] [cursor=pointer]:
+                  - /url: /symfony/web/index.php/pim/viewEmployee/empNumber/404
+              - cell [ref=e925]
+              - cell [ref=e926]
+              - cell [ref=e927]
+              - cell [ref=e928]
+        - list [ref=e930]:
+          - listitem [ref=e931]: 1-50 of 436
+          - listitem:
+            - link "First" [ref=e932] [cursor=pointer]:
+              - /url: javascript:submitPage(1)
+          - listitem:
+            - link "Previous" [ref=e933] [cursor=pointer]:
+              - /url: javascript:submitPage(1)
+          - listitem:
+            - link "1" [ref=e934] [cursor=pointer]:
+              - /url: "#"
+          - listitem:
+            - link "2" [ref=e935] [cursor=pointer]:
+              - /url: javascript:submitPage(2)
+          - listitem:
+            - link "3" [ref=e936] [cursor=pointer]:
+              - /url: javascript:submitPage(3)
+          - listitem:
+            - link "4" [ref=e937] [cursor=pointer]:
+              - /url: javascript:submitPage(4)
+          - listitem:
+            - link "5" [ref=e938] [cursor=pointer]:
+              - /url: javascript:submitPage(5)
+          - listitem:
+            - link "Next" [ref=e939] [cursor=pointer]:
+              - /url: javascript:submitPage(2)
+          - listitem:
+            - link "Last" [ref=e940] [cursor=pointer]:
+              - /url: javascript:submitPage(9)
+  - generic [ref=e941]:
+    - text: OrangeHRM 4.10.1
+    - text: © 2005 - 2026
+    - link "OrangeHRM, Inc" [ref=e942] [cursor=pointer]:
+      - /url: http://www.orangehrm.com
+    - text: . All rights reserved.
+```
+
+# Test source
+
+```ts
+  1  | import { expect, Locator, Page } from "@playwright/test";
+  2  | 
+  3  | export class AddEmp{
+  4  |    readonly page:Page
+  5  |    readonly clickPim : Locator
+  6  |    readonly clickAdd :Locator
+  7  |    readonly firstName : Locator
+  8  |    readonly Middlename :Locator
+  9  |    readonly Lastname: Locator
+  10 |    readonly employeeId :Locator
+  11 |    readonly clickSave: Locator
+  12 |    readonly displayPersonalId :Locator
+  13 |    constructor(page:Page){
+  14 |     this.page= page;
+  15 |     this.clickPim = page.getByRole('link', { name: 'PIM' })
+  16 |     this.clickAdd = page.getByRole('button', { name: 'Add' })
+  17 |     this.firstName = page.locator('input#firstName')
+  18 |     this.Middlename = page.locator('input#middleName')
+  19 |     this.Lastname = page.locator('input#lastName')
+  20 |     this.employeeId = page.locator('input#employeeId')
+  21 |     this.clickSave = page.getByRole('button', { name: 'Save' })
+  22 |     this.displayPersonalId = page.locator('input#personal_txtEmployeeId')
+  23 |     
+  24 | 
+  25 |    }
+  26 |    //method for add emp
+  27 |    async Add_Emp(fname:string,mName:string,lname:string)
+  28 |    {
+  29 |     this.clickPim.click()
+  30 |     await this.page.waitForTimeout(2000)
+> 31 |     this.clickAdd.click()
+     |                   ^ Error: locator.click: Test timeout of 30000ms exceeded.
+  32 |     await this.firstName.waitFor({ state: 'visible' });
+  33 |     await this.firstName.fill(String(fname || ""));
+  34 |     await this.Middlename.waitFor({ state: 'visible' });
+  35 |     await this.Middlename.fill(String(mName || "")); 
+  36 |     await this.Lastname.waitFor({ state: 'visible' });
+  37 |     await this.Lastname.fill(String(lname || ""));
+  38 | 
+  39 |     //capture Employee id
+  40 |     const ExpectedId = await this.employeeId.inputValue()
+  41 |     await this.clickSave.click()
+  42 |     await this.page.waitForTimeout(2000)
+  43 |     const Actualid = await this.displayPersonalId.inputValue()
+  44 |     expect(Actualid).toBe(ExpectedId);
+  45 |     console.log(ExpectedId+"     "+Actualid)
+  46 |     return Actualid;
+  47 |    }
+  48 | }
+```

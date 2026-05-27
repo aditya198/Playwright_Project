@@ -1,10 +1,8 @@
 import xlsx from 'xlsx'
-
-export class ExcelUtils{
+export class ExcelFileUtil{
 
     // filePath
     // sheetName
-    
 
     static getExcelData(filePath:string, sheetName:string){
         try{
