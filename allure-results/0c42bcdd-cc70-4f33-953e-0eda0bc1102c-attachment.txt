@@ -1,0 +1,75 @@
+OK
+200
+Total Users Fetched: 10
+[
+  {
+    id: 8477233,
+    name: 'Automation Tester',
+    email: 'test.user.1779693439563@gmail.com',
+    gender: 'male',
+    status: 'active'
+  },
+  {
+    id: 8477231,
+    name: 'Automation Tester',
+    email: 'test.user.1779693418576@gmail.com',
+    gender: 'male',
+    status: 'active'
+  },
+  {
+    id: 8477220,
+    name: 'Acaryatanaya Rana',
+    email: 'rana_acaryatanaya@predovic.test',
+    gender: 'female',
+    status: 'inactive'
+  },
+  {
+    id: 8477217,
+    name: 'Chinmayanand Naik',
+    email: 'naik_chinmayanand@howe-streich.test',
+    gender: 'female',
+    status: 'active'
+  },
+  {
+    id: 8477216,
+    name: 'Shashi Khan',
+    email: 'khan_shashi@schuppe-jacobi.test',
+    gender: 'male',
+    status: 'inactive'
+  },
+  {
+    id: 8477215,
+    name: 'Gudakesha Kaul',
+    email: 'gudakesha_kaul@ebert-corwin.test',
+    gender: 'male',
+    status: 'inactive'
+  },
+  {
+    id: 8477214,
+    name: 'Goswamee Iyengar',
+    email: 'iyengar_goswamee@carter.example',
+    gender: 'male',
+    status: 'active'
+  },
+  {
+    id: 8477213,
+    name: 'Brahmdev Marar',
+    email: 'marar_brahmdev@kub.test',
+    gender: 'male',
+    status: 'active'
+  },
+  {
+    id: 8477212,
+    name: 'Sanka Agarwal',
+    email: 'agarwal_sanka@kunze.example',
+    gender: 'female',
+    status: 'inactive'
+  },
+  {
+    id: 8477210,
+    name: 'Bheeshma Banerjee',
+    email: 'bheeshma_banerjee@little.example',
+    gender: 'male',
+    status: 'active'
+  }
+]
